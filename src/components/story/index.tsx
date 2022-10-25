@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useQuery } from 'react-query'
 import { getStory } from '../../lib/fetchStories'
+import { dateMapper } from '../../utils/timeMapper'
 import Loading from '../loading'
 
 type Story = {
@@ -22,13 +23,22 @@ const Story = ({ storyId }: any) => {
     onSuccess: setStory
   })
 
-  console.log(story)
-
   if (isLoading) {
     return <Loading />
   }
 
-  return <div data-testid="story"></div>
+  return (
+    <div>
+      <a href={story.url}>{story.title}</a>
+      <div>
+        <p>{story.score} points</p>
+        <p>by {story.by}</p>
+        <p>{dateMapper(story.time)} ago</p>
+        <p>|</p>
+        <p>{story.descendants} comments</p>
+      </div>
+    </div>
+  )
 }
 
 export default Story
