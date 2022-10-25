@@ -1,11 +1,11 @@
 import Navbar from '../navbar'
-import Story from '../story'
+import Stories from '../stories'
 
 const AppWrapper = () => {
   return (
     <div>
       <Navbar />
-      <Story />
+      <Stories />
     </div>
   )
 }

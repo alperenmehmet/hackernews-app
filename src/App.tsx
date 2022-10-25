@@ -1,14 +1,7 @@
 import AppWrapper from './components/app-wrapper'
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
-import { getStories } from './lib/fetchStories'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      queryFn: getStories
-    }
-  }
-})
+const queryClient = new QueryClient()
 
 const App = () => {
   return (

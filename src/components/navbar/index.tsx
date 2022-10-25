@@ -1,9 +1,10 @@
 import { useQuery } from 'react-query'
-import { getStories } from '../../lib/fetchStories'
 import { useState } from 'react'
 
 const Navbar = () => {
   const [content, setContent] = useState('newstories')
+  const [stories, setStories] = useState([])
+
   const { data } = useQuery([`${content}.json`])
 
   const btnArr = [
@@ -18,12 +19,10 @@ const Navbar = () => {
     setContent(newContent)
   }
 
-  console.log(data)
-  // console.log(content)
-
   return (
     <div>
       {btnArr.map((btn: any, index: number) => {
+        // @ts-ignore
         return (
           <button key={index} onClick={contentHandler}>
             {btn.name}
