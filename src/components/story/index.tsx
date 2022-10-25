@@ -16,7 +16,7 @@ type Story = {
   url: string
 }
 
-const Story = ({ storyId }: any) => {
+const Story = ({ storyId, index }: any) => {
   const [story, setStory] = useState<Story>({} as Story)
 
   const { data, isLoading } = useQuery([storyId, 'story'], getStory, {
@@ -29,6 +29,7 @@ const Story = ({ storyId }: any) => {
 
   return (
     <div>
+      <h1>{index + 1}</h1>
       <a href={story.url}>{story.title}</a>
       <div>
         <p>{story.score} points</p>
