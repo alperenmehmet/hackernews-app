@@ -12,8 +12,13 @@ export const getStory = async ({ queryKey }: any) => {
   return result
 }
 
-export const getStoryIds = async () => {
-  const result = await axios.get(NEW_STORIES_URL).then(({ data }) => data)
+export const getStoryIds = async ({ queryKey }: any) => {
+  const [storyTypes] = queryKey
+  const result = await axios
+    .get(`${BASE_URL}${storyTypes}.json`)
+    .then(({ data }) => data)
 
   return result
 }
+
+// https://hacker-news.firebaseio.com/v0/newstories.json

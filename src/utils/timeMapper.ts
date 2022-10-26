@@ -1,9 +1,7 @@
-import { formatDistance, fromUnixTime } from 'date-fns'
+import moment from 'moment'
 
-export const dateMapper = (date: number) => {
-  const newDate = fromUnixTime(date)
-  const timeAgo = formatDistance(new Date(newDate), new Date(), {
-    addSuffix: false
-  })
+export const dateMapper = (date: any) => {
+  const newDate = moment.unix(date)
+  const timeAgo = moment(newDate).toNow()
   return timeAgo
 }
