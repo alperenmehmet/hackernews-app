@@ -20,5 +20,3 @@ export const getStoryIds = async ({ queryKey }: any) => {
 
   return result
 }
-
-// https://hacker-news.firebaseio.com/v0/newstories.json

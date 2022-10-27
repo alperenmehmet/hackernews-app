@@ -36,7 +36,7 @@ const Story = ({ storyId, index }: any) => {
     <div className="story-container">
       <div className="story-header">
         <p className="story-number">{index + 1}</p>
-        <a className="story-link" href={story.url}>
+        <a className="story-link" href={story?.url}>
           {story.title}
         </a>
       </div>

@@ -29,10 +29,7 @@ const Stories = () => {
     } else {
       setTheme('light-mode')
     }
-    console.log(theme)
   }
-
-  console.log(theme)
 
   useEffect(() => {
     // @ts-ignore
@@ -80,7 +77,9 @@ const Stories = () => {
         )
       })}
       <div>
-        <button onClick={loadMoreStories}>more</button>
+        <button className="more-button" onClick={loadMoreStories}>
+          More
+        </button>
       </div>
     </div>
   )

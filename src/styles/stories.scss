@@ -6,7 +6,6 @@
     flex-direction: row;
     gap: 1rem;
     justify-content: space-between;
-    // background-color: $color-primary-header-background;
     .stories-navbar-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -27,6 +26,12 @@
       // color: $color-primary-header;
     }
   }
+  .more-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 @mixin dark-mode {
@@ -44,6 +49,14 @@
         color: $color-dark-header;
       }
     }
+    .dark-mode-button {
+      background-color: transparent;
+      color: $color-dark-header;
+    }
+    .more-button {
+      background-color: transparent;
+      color: $color-dark-header;
+    }
   }
 }
 
@@ -55,14 +68,20 @@
       }
       button {
         background-color: transparent;
-
         color: $color-primary-header;
       }
       .dark-mode-button {
         background-color: transparent;
-
         color: $color-primary-header;
       }
+    }
+    .dark-mode-button {
+      background-color: transparent;
+      color: $color-primary-header;
+    }
+    .more-button {
+      background-color: transparent;
+      color: $color-primary-header;
     }
   }
 }

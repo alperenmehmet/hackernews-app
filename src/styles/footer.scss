@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .footer-line {
+    border-top: 2px solid $color-dark-header-background;
+    margin-bottom: 15px;
+  }
+  .footer-link {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $color-primary-text;
+    }
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    margin-top: 15px;
+    padding-bottom: 2rem;
+    a {
+      text-decoration: none;
+      color: $color-primary-text;
+    }
+    span {
+      color: $color-primary-text;
+    }
+  }
+}
+
+@mixin dark-mode {
+  .footer {
+    .footer-line {
+      border-top: 2px solid $color-dark-header-background;
+    }
+    .footer-link {
+      a {
+        color: $color-dark-text;
+      }
+    }
+    .footer-links {
+      a {
+        color: $color-dark-text;
+      }
+      span {
+        color: $color-dark-text;
+      }
+    }
+  }
+}
+
+@mixin light-mode {
+  .footer {
+    .footer-line {
+      border-top: 2px solid $color-dark-header-background;
+    }
+    .footer-link {
+      a {
+        color: $color-primary-text;
+      }
+    }
+    .footer-links {
+      a {
+        color: $color-primary-text;
+      }
+      span {
+        color: $color-primary-text;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}

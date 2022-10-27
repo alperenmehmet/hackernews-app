@@ -11,4 +11,6 @@ body {
   Geneva,
   sans-serif;
  ;
+ transition: all 0.3s ease;
+ ;
 }
