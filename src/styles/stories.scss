@@ -1,0 +1,76 @@
+@import './variables.scss';
+
+.stories-container {
+  .stories-navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    // background-color: $color-primary-header-background;
+    .stories-navbar-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      // color: $color-primary-header;
+    }
+    .dark-mode-button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      // color: $color-primary-header;
+    }
+  }
+}
+
+@mixin dark-mode {
+  .stories-container {
+    .stories-navbar {
+      background-color: $color-dark-header-background;
+      .stories-navbar-buttons {
+      }
+      button {
+        background-color: transparent;
+        color: $color-dark-header;
+      }
+      .dark-mode-button {
+        background-color: transparent;
+        color: $color-dark-header;
+      }
+    }
+  }
+}
+
+@mixin light-mode {
+  .stories-container {
+    .stories-navbar {
+      background-color: $color-primary-header-background;
+      .stories-navbar-buttons {
+      }
+      button {
+        background-color: transparent;
+
+        color: $color-primary-header;
+      }
+      .dark-mode-button {
+        background-color: transparent;
+
+        color: $color-primary-header;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}

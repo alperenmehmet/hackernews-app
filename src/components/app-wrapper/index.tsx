@@ -1,8 +1,9 @@
 import Stories from '../stories'
+import '../../styles/app-wrapper.scss'
 
 const AppWrapper = () => {
   return (
-    <div>
+    <div className="container">
       <Stories />
     </div>
   )

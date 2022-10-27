@@ -3,6 +3,7 @@ import { useQuery } from 'react-query'
 import { getStory } from '../../lib/fetchStories'
 import { dateMapper } from '../../utils/timeMapper'
 import Loading from '../loading'
+import '../../styles/story.scss'
 
 type Story = {
   by: string
@@ -32,15 +33,19 @@ const Story = ({ storyId, index }: any) => {
   }
 
   return (
-    <div>
-      <h1>{index + 1}</h1>
-      <a href={story.url}>{story.title}</a>
-      <div>
-        <p>{story.score} points</p>
-        <p>by {story.by}</p>
-        <p>{dateMapper(story?.time)} ago</p>
-        <p>|</p>
-        <p>{story.descendants} comments</p>
+    <div className="story-container">
+      <div className="story-header">
+        <p className="story-number">{index + 1}</p>
+        <a className="story-link" href={story.url}>
+          {story.title}
+        </a>
+      </div>
+      <div className="story-details">
+        <span>{story.score} points</span>
+        <span> by {story.by}</span>
+        <span>{dateMapper(story?.time)} ago</span>
+        <span> | </span>
+        <span>{story.descendants} comments</span>
       </div>
     </div>
   )

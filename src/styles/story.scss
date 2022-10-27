@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+  flex-wrap: wrap;
+  .story-header {
+    display: flex;
+    .story-link {
+      text-decoration: none;
+      // color: $color-primary-header;
+      margin-left: 15px;
+    }
+    .story-number {
+      // color: $color-primary-header;
+    }
+  }
+  .story-details {
+    margin-left: 33px;
+    margin-top: 5px;
+    // color: $color-primary-text;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin dark-mode {
+  .story-container {
+    .story-header {
+      .story-link {
+        color: $color-dark-header;
+      }
+      .story-number {
+        color: $color-dark-header;
+      }
+    }
+    .story-details {
+      color: $color-dark-text;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@mixin light-mode {
+  .story-container {
+    .story-header {
+      .story-link {
+        color: $color-primary-header;
+      }
+      .story-number {
+        color: $color-primary-header;
+      }
+    }
+    .story-details {
+      color: $color-primary-text;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}

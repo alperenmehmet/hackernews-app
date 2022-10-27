@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+body {
+}
+
+.container {
+  // background-color: $color-primary-container-background;
+  max-width: $max-width;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+@mixin dark-mode {
+  body {
+    background-color: $color-dark-background;
+
+    .container {
+      background-color: $color-dark-container-background;
+    }
+  }
+}
+
+@mixin light-mode {
+  .container {
+    background-color: $color-primary-container-background;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}
