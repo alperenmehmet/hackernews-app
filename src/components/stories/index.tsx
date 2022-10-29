@@ -41,7 +41,7 @@ const Stories = () => {
   const loadMoreStories = () => {
     setStartingIndex(startingIndex + 30)
     setLastIndex(lastIndex + 30)
-    window.scroll(0, 0)
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
   }
 
   const contentHandler = (e: any) => {

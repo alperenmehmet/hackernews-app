@@ -2,15 +2,21 @@ import '../../styles/footer.scss'
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" data-testid="footer">
       <div className="footer-line"></div>
       <div className="footer-link">
-        <a href="https://www.ycombinator.com/apply/">
+        <a
+          href="https://www.ycombinator.com/apply/"
+          data-testid="applications-are-open"
+        >
           Applications are open for YC Winter 2023
         </a>
       </div>
       <div className="footer-links">
-        <a href="https://news.ycombinator.com/newsguidelines.html">
+        <a
+          href="https://news.ycombinator.com/newsguidelines.html"
+          data-testid="guidelines"
+        >
           Guidelines
         </a>
         <span> | </span>
