@@ -37,15 +37,15 @@ const Story = ({ storyId, index }: any) => {
       <div className="story-header">
         <p className="story-number">{index + 1}</p>
         <a className="story-link" href={story?.url}>
-          {story.title}
+          {story?.title}
         </a>
       </div>
       <div className="story-details">
-        <span>{story.score} points</span>
-        <span> by {story.by}</span>
+        <span>{story?.score} points</span>
+        <span> by {story?.by}</span>
         <span>{dateMapper(story?.time)} ago</span>
         <span> | </span>
-        <span>{story.descendants} comments</span>
+        <span>{story?.descendants} comments</span>
       </div>
     </div>
   )

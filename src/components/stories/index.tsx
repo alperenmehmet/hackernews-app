@@ -45,10 +45,11 @@ const Stories = () => {
   }
 
   const contentHandler = (e: any) => {
+    setStartingIndex(0)
+    setLastIndex(30)
     const newStr = e.target.innerText
     const newContent = newStr.replace(/ +/g, '').toLowerCase()
     setStoriesType(newContent)
-    setStartingIndex(0)
   }
 
   return (
