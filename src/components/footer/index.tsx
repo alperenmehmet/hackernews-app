@@ -32,7 +32,7 @@ const Footer = () => {
         <span> | </span>
         <a href="https://www.ycombinator.com/apply/">Apply</a>
         <span> | </span>
-        <a href="https://news.ycombinator.com">Contanct</a>
+        <a href="https://news.ycombinator.com">Contact</a>
       </div>
     </div>
   )

@@ -23,14 +23,39 @@ test('test for all the links render', () => {
   expect(links).toHaveLength(9)
 })
 
-test('testing if it has an main link button', () => {
+test('testing if it has an main link ', () => {
   const homeButton = screen.getByTestId('applications-are-open')
   expect(homeButton.innerHTML).toMatch(
     'Applications are open for YC Winter 2023'
   )
 })
 
-test('testing if it has an guidelines link button', () => {
+test('testing if it has an guidelines link', () => {
   const homeButton = screen.getByTestId('guidelines')
   expect(homeButton.innerHTML).toMatch('Guidelines')
+})
+
+test('testing if it has an FAQ link ', () => {
+  const homeButton = screen.getByText('FAQ')
+  expect(homeButton).toBeInTheDocument()
+})
+
+test('testing if it has an API link ', () => {
+  const homeButton = screen.getByText('API')
+  expect(homeButton).toBeInTheDocument()
+})
+
+test('testing if it has an LEGAL link ', () => {
+  const homeButton = screen.getByText('Legal')
+  expect(homeButton).toBeInTheDocument()
+})
+
+test('testing if it has an apply link ', () => {
+  const homeButton = screen.getByText('Apply')
+  expect(homeButton).toBeInTheDocument()
+})
+
+test('testing if it has an apply link ', () => {
+  const homeButton = screen.getByText('Contact')
+  expect(homeButton).toBeInTheDocument()
 })

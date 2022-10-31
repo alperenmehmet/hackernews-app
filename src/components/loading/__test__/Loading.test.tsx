@@ -1,24 +1,19 @@
 import { render, screen } from '@testing-library/react'
-import AppWrapper from '../index'
 import '@testing-library/jest-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import Loading from '..'
 
 const queryClient = new QueryClient()
 
 beforeEach(() => {
   render(
     <QueryClientProvider client={queryClient}>
-      <AppWrapper />
+      <Loading />
     </QueryClientProvider>
   )
 })
 
-test('test for AppWrapper component render correctly', () => {
-  const el = screen.getByRole('div')
-  expect(el).toHaveClass('container')
-})
-
-test('test for AppWrapper component render correctly', () => {
-  const el = screen.getByTestId('appwrapper')
+test('loading component', () => {
+  const el = screen.getByTestId('loading')
   expect(el).toBeInTheDocument()
 })
